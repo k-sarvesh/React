@@ -3,3 +3,14 @@
 /* body{
     background-color: #0f172a;
 } */
+
+#cardsflow::-webkit-scrollbar{
+    display: none;
+}
+#cardsflow{
+    transition: 0.3s ease-in-out;
+    scroll-snap-type: x mandatory;
+}
+#card{
+    scroll-snap-align: start;
+}

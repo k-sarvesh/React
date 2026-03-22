@@ -1,8 +1,15 @@
 import React from 'react'
+import RightCard from './RightCard'
 
-function Rightcontent() {
+function Rightcontent(props) {
   return (
-    <div className='h-full w-2/3 bg-mist-400 '>Rightcontent</div>
+    <div id = "cardsflow" className='h-full w-2/3 p-4 flex flex-nowrap gap-10 overflow-x-auto'>
+      {
+        props.data.map((item) => {
+          return <RightCard key={item.id} data={item}/>
+        })
+      }
+      </div>
   )
 }
 
