@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useTransition } from 'react'
+import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 
 const App = () => {
@@ -43,7 +43,7 @@ const App = () => {
           setIndex(1);
         }} className='bg-green-400 p-1 w-28 text-white rounded text-2xl cursor-pointer active:scale-95 '>Get Data </button>
       </div>
-      <div className="flex text-white h-[82%] text-2xl bg-cover flex flex-wrap justify-center gap-6">
+      <div className="flex text-white h-[82] text-2xl bg-cover flex flex-wrap justify-center gap-6">
         {printuserData}
       </div>
       <div className="flex justify-center gap-4 mt-10">
