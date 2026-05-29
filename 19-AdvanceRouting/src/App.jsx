@@ -9,6 +9,7 @@ import About from './Pages/About'
 import NotFound from './Pages/NotFound'
 import Womens from './Pages/Womens'
 import Mens from './Pages/Mens'
+import AboutDetails from './Pages/AboutDetails'
 
 
 const App = () => {
@@ -17,12 +18,16 @@ const App = () => {
        <NavBar/>
        <Routes>
           <Route path='/' element={<Home/>}/>
+          {// Nested Routing
+           }
           <Route path='/product' element={<Product/>}>
             <Route path='mens' element={<Mens/>} />
             <Route path='womens' element={<Womens/>} />
           </Route>
           <Route path='/contact' element={<Contact/>}/>
+          {/* Dynamic Routing */}
           <Route path='/about' element={<About/>}/>
+          <Route path='/about/:id' element = {<AboutDetails/>}/> 
           
 
           <Route path='*' element={<NotFound/>}/>
